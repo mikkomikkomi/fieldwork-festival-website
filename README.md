@@ -82,5 +82,10 @@ All photos are stock photography served under free licenses — no AI-generated 
 
 ## Deployment
 
-Static hosting on GitHub Pages from this repository (branch settings → Pages).
-Pushing to the published branch redeploys automatically.
+Static hosting on GitHub Pages via `.github/workflows/deploy-pages.yml`
+(upload + deploy artifact on every push to `main` or the working branch).
+
+**One-time setup (repository admin only):** GitHub Settings → Pages →
+*Build and deployment* → Source: **GitHub Actions**. Creating a Pages site
+requires admin rights that CI tokens don't have, so this single click can't
+be automated; every deploy afterwards is automatic.

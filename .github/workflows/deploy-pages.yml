@@ -27,6 +27,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Pages
+        # enablement: true creates the Pages site on first run where the
+        # token is allowed to; a repository admin can also flip
+        # Settings -> Pages -> Source: "GitHub Actions" once (idempotent).
         uses: actions/configure-pages@v5
         with:
           enablement: true
